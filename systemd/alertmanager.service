@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus Alertmanager
+
+[Service]
+EnvironmentFile=/etc/sysconfig/alertmanager
+ExecStart=/usr/sbin/alertmanager $OPTIONS
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
